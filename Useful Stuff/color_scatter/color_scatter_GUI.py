@@ -1,11 +1,18 @@
-from color_tool_logic import validate_hex, scatter_color, hex_to_hsl
+from color_scatter_logic import validate_hex, scatter_color, hex_to_hsl
 import customtkinter as ctk
+import ctypes
 
 #----------------------|Initial|----------------------#
 
+myappid = 'mycompany.myproduct.subproduct.version'
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+
 app = ctk.CTk()
+app.title("ColorScatter")
 app.geometry("400x500")
 app.resizable(False, False)
+
+app.after(201, lambda : app.iconbitmap("C:/Scott/Code/everything-repo/Useful Stuff/color_scatter/icon.ico"))
 
 container = ctk.CTkFrame(app)
 container.pack(fill="both", expand=True)
@@ -268,6 +275,9 @@ def update_color_preview(event):
         color_preview.configure(fg_color="#ffffff")
 
 vcmd = app.register(limit_length)
+
+app_title = ctk.CTkLabel(screen_input, text="ColorScatter", font=ctk.CTkFont(family="Unispace", size=45, weight="bold"))
+app_title.place(relx=0.5, rely=0.12, anchor="center")
 
 color_preview = ctk.CTkLabel(screen_input, text="", width=180, height=180, fg_color="#ffffff", corner_radius=CORNER_RADIUS)
 color_preview.place(relx=0.3, rely=0.6, anchor="center")
