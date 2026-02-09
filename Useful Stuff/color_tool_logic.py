@@ -33,7 +33,7 @@ def scatter_color(hex, h_pos, h_neg, l_pos, l_neg, s_pos, s_neg):
     h, l, s = colorsys.rgb_to_hls(r/255, g/255, b/255)
     
     h, l, s = h*360, l*100, s*100
-    count = 10
+    count = 9
     results = []
     
     for i in range(count):
