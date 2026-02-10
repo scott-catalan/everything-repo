@@ -1,3 +1,5 @@
+#Made in 1/19
+
 import os, sys
 from tkinter import *
 from wordleLogic import WORD, WORDS, GUESSES, CALCULATE

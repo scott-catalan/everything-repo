@@ -1,3 +1,5 @@
+#Made in 1/10
+
 import tkinter as tk
 
 root = tk.Tk()

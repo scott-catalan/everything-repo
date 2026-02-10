@@ -1,3 +1,5 @@
+#Made in 1/28
+
 def parse(user):
     if len(user) < 4:
         print("Missing essential input")
@@ -62,6 +64,7 @@ def parse(user):
 while True:
     user = input("\nTemperature (e.g. 50FtC, 2887CtF, 12CtK):\n>")
     result = parse(user)
+    newnum = 0
     if not result:
         continue
     num, unit, convert = result

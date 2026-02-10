@@ -1,3 +1,5 @@
+#Made in 2/2
+
 import random, time, sys
 
 annoyance = 0

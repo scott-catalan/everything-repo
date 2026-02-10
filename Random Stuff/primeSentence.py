@@ -1,3 +1,5 @@
+#Made in 1/15
+
 in1 = int(input("Type any whole number: "))
 div = 2
 

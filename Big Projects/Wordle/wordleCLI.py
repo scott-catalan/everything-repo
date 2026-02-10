@@ -1,3 +1,5 @@
+#Made in 1/18
+
 from wordleLogic import WORD, WORDS, GUESSES, CALCULATE
 import sys
 

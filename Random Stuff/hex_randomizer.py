@@ -1,3 +1,5 @@
+#Made in 2/4
+
 import random
 
 def rgb(hex):

@@ -1,3 +1,5 @@
+#Made in 1/19
+
 import random
 
 def WORDS(path='words.txt'):
