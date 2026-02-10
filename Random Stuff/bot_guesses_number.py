@@ -196,6 +196,7 @@ while True:
     maximum = 1000
     i = 0
     redo = True
+    guess = 0
 
     while i < 15:
         if redo:
