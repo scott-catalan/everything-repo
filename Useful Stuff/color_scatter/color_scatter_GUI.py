@@ -1,3 +1,7 @@
+'''
+# Project Creation Date: 6:21:32 PM, 2/8/2026
+'''
+
 from color_scatter_logic import validate_hex, scatter_color, hex_to_hsl
 import customtkinter as ctk
 import ctypes
