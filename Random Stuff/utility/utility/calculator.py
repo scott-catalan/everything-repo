@@ -6,6 +6,8 @@ func = int(input("Function (1-8): "))
 #exponent=5, tetration=6, square root=7, cube root=8
 
 def EXECUTE(in1, in2, func):
+    out = 0
+
     if func == 1:
         out = in1 + in2
     elif func == 2:
@@ -31,4 +33,5 @@ def EXECUTE(in1, in2, func):
         out = "Choose a function from 1 to 8"
     if not (func == 4 and in2 == 0):
         print(out)
-EXECUTE(in1, in2)
+
+EXECUTE(in1, in2, func)
