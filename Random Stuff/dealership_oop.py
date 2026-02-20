@@ -30,7 +30,7 @@ class Truck(Vehicle):
 
     def __repr__(self):
         base = super().__repr__()
-        return f"{base}, {self.payload_capacity} lbs payload capacity, {self.bed_length} ft bed, {self.towing_capacity} lbs towing capacity"
+        return f"{base}, {self.payload_capacity}lbs payload capacity, {self.bed_length}ft bed, {self.towing_capacity}lbs towing capacity"
 
 class Car(Vehicle):
     def __init__(self, brand, model, year, color, price, miles, fuel_range, seating_capacity, cargo_volume, doors):
@@ -52,7 +52,7 @@ class Motorcycle(Vehicle):
 
     def __repr__(self):
         base = super().__repr__()
-        return f"{base}, {self.engine_displacement} cc engine, {self.seat_height} in seat height, {self.wheelbase} in wheelbase"
+        return f"{base}, {self.engine_displacement}cc engine, {self.seat_height}in seat height, {self.wheelbase}in wheelbase"
 
 def display(vehicle_type):
     for vehicle in display_select[vehicle_type]:
@@ -79,6 +79,8 @@ display_select = {
     'm': motorcycles
 }
 
+user_money = 381000
+
 print("(You have 381,000 dollars in the bank upon visiting the dealership)")
 print("Welcome to our dealership, where we sell totally-fairly-priced vehicles and specialize in unfairly collecting large sums of money!")
 
@@ -90,4 +92,18 @@ while True:
     else:
         display(selection)
         print()
-        print("See anything you like?\n('1' for first, '2' for second, '3' for third)")
+        pick = input("See anything you like?\n('1' for first, '2' for second, '3' for third)\n>")
+        if pick not in ['1', '2', '3']:
+            print("\nGuess nothing here.\n")
+            continue
+        else:
+            buy = input("Outstanding choice! Do you wish to purchase this vehicle? (y/n)\n>").lower()
+            if buy == "n":
+                print("\nNo? Well than how can we extort you of all your mo- uhh... I mean... no problem!\n")
+                continue
+            elif buy == "y":
+                print("Beautiful\n")
+                vehicle = display_select[selection][int(pick) - 1]
+                print(vehicle.purchase(user_money))
+                user_money -= vehicle.price
+                print(f"You now have ${user_money}")
