@@ -24,7 +24,7 @@ class Employee:
         print(f"{self.firstname} has been fired.")
 
 sarah = Employee("Sarah", "Brown", "sarahbrown8172@gmail.com", 62, 82000, "accountant")
-samuel = Employee("Samuel", "Hensen", "hen.samuel@gmail.com", 24, 31000, "customer service worker")
+samuel = Employee("Samuel", "Hensen", "hen.samuel@gmail.com", 24, 31000, "janitor")
 megumi = Employee("Megumi", "Suzuki", "susuki.megumi.email@gmail.com", 36, 51000, "secretary")
 
 print(f"""Oh, you wanna know our {megumi.position} salary? Well, meet {megumi.firstname}, our current secretary. 
