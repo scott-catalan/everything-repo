@@ -28,7 +28,6 @@ diagonals_8 = [
 
 red_first = ["red"[:x+1] for x in range(len("red"))]
 yellow_first = ["yellow"[:x+1] for x in range(len("yellow"))]
-
 text_colors = {
     1: '\033[31m',  #Red
     2: '\033[33m',  #Yellow
